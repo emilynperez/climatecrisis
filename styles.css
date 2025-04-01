@@ -1,12 +1,10 @@
-*{
-    color: #f5a7bc;
-    background-color: black;
-};
 
+body{
+background-color: black;
+}
 
 html{
     margin: auto;
-    width: 50%;
     padding: 10px;
 }
 
@@ -15,8 +13,6 @@ ul{
     margin: 0;
     padding: 0;
     overflow: hidden;
-    position: sticky;
-    top: 0;
     margin: -9px;
     font-size: 15px;
 }
@@ -28,9 +24,7 @@ header{
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    width: 100vh;
-    
-
+    width: 100%;
 }
 
 
@@ -43,6 +37,7 @@ h1{
     font-size: 20px;
     width: 50%;
     padding: 25px;
+    color:#f5a7bc;
 }
 
 iframe{
@@ -146,4 +141,53 @@ iframe{
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+hr{
+  display:flex;
+  height : 3px;
+  width: 100%;
+  justify-content: center;
+  background-color: #f5a7bc;
+  border-radius: 10px;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgba(245, 167, 188, 0.95);
+  color: black; /* Default text color for the navbar */
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo img {
+  height: 60px; /* Adjust the height as needed */
+  margin-right: 20px; /* Add some space between the logo and links */
+}
+.nav-links-wrapper {
+  flex-grow: 1; /* Allow the wrapper to take up remaining space */
+  display: flex;
+  justify-content: center; /* Center the links within the wrapper */
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 80px;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.nav-links a {
+  font-size: 25px;
+  color: black; /* Black text */
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 5px; /* Slightly rounded corners */
+  transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Light gray hover */
 }
