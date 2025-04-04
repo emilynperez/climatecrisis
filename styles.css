@@ -1,11 +1,13 @@
 
 body{
 background-color: black;
+margin: 0;
+padding: 0;
 }
 
 html{
     margin: auto;
-    padding: 10px;
+    padding: 0px;
 }
 
 
@@ -13,7 +15,7 @@ ul{
     margin: 0;
     padding: 0;
     overflow: hidden;
-    margin: -9px;
+    margin: 0px;
     font-size: 15px;
 }
 
@@ -26,6 +28,21 @@ header{
     align-content: center;
     width: 100%;
 }
+footer {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+footer a{
+  font-size: 30px;
+}
+
 
 
 h1{
@@ -36,7 +53,7 @@ h1{
     flex-direction: column;
     font-size: 20px;
     width: 50%;
-    padding: 25px;
+    padding: 30px;
     color:#f5a7bc;
 }
 
@@ -96,16 +113,34 @@ iframe{
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
+  color: black;
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
   bottom: 8px;
   width: 100%;
-  text-align: center;
-  opacity: 0.7;
+  text-align: left;
   font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.6); 
 }
+
+.text ul {
+  list-style-type: square; 
+  padding-left: 20px; 
+  text-align: left; 
+}
+
+.text li:first-child {
+  list-style-type: none; 
+  text-align: left; 
+  padding-left: 0; 
+  margin-bottom: 5px; 
+}
+
+.text li:not(:first-child) {
+  margin-bottom: 5px; 
+}
+
 
 /* Number text (1/4 etc) */
 .numbertext {
@@ -143,51 +178,140 @@ iframe{
   to {opacity: 1}
 }
 hr{
+  margin: 20px auto;
+  width: 98%;
   display:flex;
   height : 3px;
-  width: 100%;
   justify-content: center;
   background-color: #f5a7bc;
-  border-radius: 10px;
+  border: none;
+  border-radius: 40px;
 }
 .navbar {
   display: flex;
   align-items: center;
   padding: 10px 20px;
   background-color: rgba(245, 167, 188, 0.95);
-  color: black; /* Default text color for the navbar */
+  color: black; 
   width: 100%;
   position: sticky;
   top: 0;
   z-index: 100;
 }
 .logo img {
-  height: 60px; /* Adjust the height as needed */
-  margin-right: 20px; /* Add some space between the logo and links */
+  height: 60px; 
+  margin-right: 20px; 
 }
 .nav-links-wrapper {
-  flex-grow: 1; /* Allow the wrapper to take up remaining space */
+  flex-grow: 1; 
   display: flex;
-  justify-content: center; /* Center the links within the wrapper */
+  justify-content: center; 
 }
 
 .nav-links {
   display: flex;
   list-style: none;
   gap: 80px;
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
+  margin: 0; 
+  padding: 0; 
 }
 
 .nav-links a {
   font-size: 25px;
-  color: black; /* Black text */
+  color: black; 
   text-decoration: none;
   padding: 8px 12px;
-  border-radius: 5px; /* Slightly rounded corners */
+  border-radius: 5px; 
   transition: background-color 0.3s ease;
 }
 
 .nav-links a:hover {
-  background-color: rgba(0, 0, 0, 0.1); /* Light gray hover */
+  background-color: rgba(0, 0, 0, 0.1); 
+}
+.mySlides img {
+  width: 300px; 
+  height: 400px; 
+  object-fit: cover; 
+}
+iframe {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #f5a7bc; 
+  border-radius: 10px; 
+}
+@media screen and (max-width: 600px) {
+  header img {
+    width: 90%;
+    height: auto;
+    display: block; 
+    margin: 0 auto; 
+}
+
+  h1 {
+      width: 90%;
+      font-size: 18px;
+      padding: 15px;
+  }
+
+  iframe {
+    width: 80%; 
+    max-width: 800px; 
+    aspect-ratio: 16 / 9; 
+    height: auto; 
+    display: block; 
+  }
+
+  .slideshow-container {
+      max-width: 90%;
+  }
+
+  .mySlides img {
+    width: 90%;
+    max-width: 300px;
+    aspect-ratio: 3 / 4; 
+    height: auto; 
+    object-fit: cover;
+    display: block;
+    margin: 0 auto; 
+  }
+
+  .text {
+    color: black;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 0; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 80%;
+    text-align: center; 
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.6); 
+  }
+  .navbar {
+    position: sticky;
+    position: -webkit-sticky; 
+  }
+
+  .nav-links {
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      gap: 10px; 
+      padding: 0 5px;
+  }
+
+  .nav-links a {
+      font-size: 16px; 
+      padding: 5px 8px; 
+      white-space: nowrap; 
+  }
+
+  .logo img {
+    width: 40px;
+    height: auto;
+    margin-left: 5px; 
+  }
 }
